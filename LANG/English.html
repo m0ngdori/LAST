@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>아트록스 - 리그 오브 레전드</title>
+   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="champion-hero">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h2>the Darkin Blade</h2>
+      <h1>Aatrox</h1>
+      <p>Aatrox was once an Ascended being of Shurima, a noble warrior who fought against the Void.
+          However, after centuries of war and corruption, he became known as a Darkin, tricked by mortal magic and sealed within his own blade.
+          After centuries of imprisonment, he returned by consuming hosts and replacing their bodies with his own form, wandering the battlefield once more.
+          But he soon realized he could never be truly free.
+          Now, Aatrox seeks to destroy everything in existence, hoping to disappear along with the end of the world.</p>
+      </p>
+      <div class="hero-tags">
+  <div class="info-card">
+    <img src="images/icon-role.png" alt="역할 아이콘">
+    <div class="title">Role</div>
+    <div class="value">Fighter</div>
+  </div>
+  <div class="info-card">
+    <img src="images/icon-position.png" alt="포지션 아이콘">
+    <div class="title">Position</div>
+    <div class="value">Top</div>
+  </div>
+</div>
+</header>
+
+<div class="language-toggle-wrapper">
+  <div class="language-toggle-button" onclick="toggleLanguageMenu()">LANGUAGE</div>
+  <div class="language-options" id="languageOptions">
+    <div class="language-option" onclick="setLanguage('ko')">한국어</div>
+    <div class="language-option" onclick="setLanguage('en')">ENGLISH</div>
+  </div>
+</div>
+
+
+<div class="container">
+
+<div class="section">
+  <h2>Lore</h2>
+  <p>
+    Once honored defenders of Shurima against the Void, 
+    Aatrox and his brethren would eventually become an even greater threat to Runeterra, 
+    and were defeated only by cunning mortal sorcery. But after centuries of imprisonment,
+     Aatrox was the first to find freedom once more, corrupting and transforming those foolish 
+     enough to try and wield the magical weapon that contained his essence. Now, with stolen flesh, 
+     he walks Runeterra in a brutal approximation of his previous form, seeking an apocalyptic and long overdue vengeance.
+  </p>
+</div>
+
+  <div class="section">
+    <h2>ABILITIES</h2>
+    <div class="skill-icons">
+      <img src="https://ddragon.leagueoflegends.com/cdn/15.14.1/img/passive/Aatrox_Passive.png" alt="P" onclick="showSkill(0)" />
+      <img src="https://ddragon.leagueoflegends.com/cdn/15.14.1/img/spell/AatroxQ.png" alt="Q" onclick="showSkill(1)" />
+      <img src="https://ddragon.leagueoflegends.com/cdn/15.14.1/img/spell/AatroxW.png" alt="W" onclick="showSkill(2)" />
+      <img src="https://ddragon.leagueoflegends.com/cdn/15.14.1/img/spell/AatroxE.png" alt="E" onclick="showSkill(3)" />
+      <img src="https://ddragon.leagueoflegends.com/cdn/15.14.1/img/spell/AatroxR.png" alt="R" onclick="showSkill(4)" />
+    </div>
+    <div class="skill-info">
+      <h3 id="skill-name">Deathbringer Stance (P)</h3>
+      <p id="skill-desc">Periodically, Aatrox's next basic attack deals bonus physical damage and heals him, based on the target's max health.</p>
+      <video id="skill-video" controls autoplay muted loop>
+        <source src="https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_P1.webm#t=0" type="video/webm" />
+      </video>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Available Skins</h2>
+
+    <div class="skins-grid">
+      <div class="skin-card" onclick="openLightbox('img1')">
+        <img src="https://buly.kr/BIVAnx9" alt="기본 스킨" />
+        <p>Aatrox</p>
+      </div>
+
+      <div class="skin-card" onclick="openLightbox('img2')">
+        <img src="https://buly.kr/90bK3M1" alt="정의의 아트록스" />
+        <p>Justicar Aatrox</p>
+      </div>
+
+      <div class="skin-card" onclick="openLightbox('img3')">
+        <img src="https://buly.kr/EdtZRSu" alt="메카 아트록스" />
+        <p>Mecha Aatrox</p>
+      </div>
+
+      <div class="skin-card" onclick="openLightbox('img4')">
+        <img src="https://buly.kr/4md8Vmg" alt="바다 사냥꾼 아트록스" />
+        <p>Sea Hunter Aatrox</p>
+      </div>
+
+      <div class="skin-card" onclick="openLightbox('img5')">
+        <img src="https://buly.kr/HHcw9iM" alt="핏빛달 아트록스" />
+        <p>Blood Moon Aatrox</p>
+      </div>
+
+      <div class="skin-card" onclick="openLightbox('img6')">
+        <img src="https://buly.kr/6MrxL9M" alt="프레스티지 핏빛달 아트록스" />
+        <p>Prestige Blood Moon Aatrox</p>
+      </div>
+
+      <div class="skin-card" onclick="openLightbox('img7')">
+        <img src="https://buly.kr/2qYnirP" alt="승리의 아트록스" />
+        <p>Victorious Aatrox</p>
+      </div>
+
+      <div class="skin-card" onclick="openLightbox('img8')">
+        <img src="https://buly.kr/7bHGCuB" alt="오디세이 아트록스" />
+        <p>Odyssey Aatrox</p>
+      </div>
+
+      <div class="skin-card" onclick="openLightbox('img9')">
+        <img src="https://buly.kr/612RNbA" alt="달을 삼킨 아트록스" />
+        <p>Lunar Eclipse Aatrox</p>
+      </div>
+
+      <div class="skin-card" onclick="openLightbox('img10')">
+        <img src="https://buly.kr/G3DdI6u" alt="DRX 아트록스" />
+        <p>DRX Aatrox</p>
+      </div>
+
+      <div class="skin-card" onclick="openLightbox('img11')">
+        <img src="https://buly.kr/2JoWmU4" alt="프레스티지 DRX 아트록스" />
+        <p>Prestige DRX Aatrox</p>
+      </div>
+
+      <div class="skin-card" onclick="openLightbox('img12')">
+        <img src="https://buly.kr/881X9QD" alt="태고족 아트록스" />
+        <p>Primordian Aatrox</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- 라이트박스 모음 -->
+<div id="img1" class="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <img src="https://buly.kr/BIVAnx9" alt="아트록스 기본 스킨" />
+</div>
+<div id="img2" class="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <img src="https://buly.kr/90bK3M1" alt="정의의 아트록스" />
+</div>
+<div id="img3" class="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <img src="https://buly.kr/EdtZRSu" alt="메카 아트록스" />
+</div>
+<div id="img4" class="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <img src="https://buly.kr/4md8Vmg" alt="바다 사냥꾼 아트록스" />
+</div>
+<div id="img5" class="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <img src="https://buly.kr/HHcw9iM" alt="핏빛달 아트록스" />
+</div>
+<div id="img6" class="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <img src="https://buly.kr/6MrxL9M" alt="프레스티지 핏빛달 아트록스" />
+</div>
+<div id="img7" class="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <img src="https://buly.kr/2qYnirP" alt="승리의 아트록스" />
+</div>
+<div id="img8" class="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <img src="https://buly.kr/7bHGCuB" alt="오디세이 아트록스" />
+</div>
+<div id="img9" class="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <img src="https://buly.kr/612RNbA" alt="달을 삼킨 아트록스" />
+</div>
+<div id="img10" class="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <img src="https://buly.kr/G3DdI6u" alt="DRX 아트록스" />
+</div>
+<div id="img11" class="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <img src="https://buly.kr/2JoWmU4" alt="프레스티지 DRX 아트록스" />
+</div>
+<div id="img12" class="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <img src="https://buly.kr/881X9QD" alt="태고족 아트록스" />
+</div>
+
+<script>
+  const skillData = [
+    {
+      name: "Deathbringer Stance(P)",
+      desc: "Periodically, Aatrox's next basic attack deals bonus physical damage and heals him, based on the target's max health.",
+      video: "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_P1.webm#t=0"
+    },
+    {
+      name: "The Darkin Blade(Q)",
+      desc: "Aatrox slams his greatsword down, dealing physical damage. He can swing three times, each with a different area of effect.",
+      video: "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_Q1.webm#t=0"
+    },
+    {
+      name: "Infernal Chains(W)",
+      desc: "Aatrox smashes the ground, dealing damage to the first enemy hit. Champions and large monsters have to leave the impact area quickly or they will be dragged to the center and take the damage again.",
+      video: "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_W1.webm#t=0"
+    },
+    {
+      name: "Umbral Dash(E)",
+      desc: "Passively, Aatrox heals when damaging enemy champions. On activation, he dashes in a direction.",
+      video: "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_E1.webm#t=0"
+    },
+    {
+      name: "World Ender(R)",
+      desc: "Aatrox unleashes his demonic form, fearing nearby enemy minions and gaining attack damage, increased healing, and Move Speed. If he gets a takedown, this effect is extended.",
+      video: "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_R1.webm#t=0"
+    }
+  ];
+
+ function showSkill(index) {
+  const skill = skillData[index];
+  const videoElement = document.getElementById("skill-video");
+  const sourceElement = videoElement.querySelector("source");
+
+  // 텍스트 교체
+  document.getElementById("skill-name").innerText = skill.name;
+  document.getElementById("skill-desc").innerText = skill.desc;
+
+  // video source 교체
+  if (sourceElement.src !== skill.video) {
+    sourceElement.src = skill.video;
+
+    // video 업데이트 (최소화된 방식)
+    videoElement.pause();  // 중단 후
+    videoElement.load();   // 소스 갱신
+    videoElement.play();   // 다시 재생
+  }
+}
+
+
+
+  function openLightbox(id) {
+    document.getElementById(id).classList.add('active');
+    document.body.style.overflow = 'hidden'; // 스크롤 잠금
+  }
+
+  function closeLightbox() {
+    const lightboxes = document.querySelectorAll('.lightbox.active');
+    lightboxes.forEach(lb => lb.classList.remove('active'));
+    document.body.style.overflow = ''; // 스크롤 해제
+  }
+function toggleLanguageMenu() {
+  const menu = document.getElementById("languageOptions");
+  menu.style.display = (menu.style.display === "block") ? "none" : "block";
+}
+
+function setLanguage(lang) {
+  if (lang === 'ko') {
+    window.location.href = "../Korean.html"; // 🔥 이거 반드시 "두 점" 필요!
+  } else if (lang === 'en') {
+    window.location.href = "English.html"; // 현재 폴더 내
+  }
+}
+
+
+
+</script>
+<footer class="site-footer">
+  <div class="footer-socials">
+    <a href="https://www.youtube.com/@M0ngtrox08" target="_blank">
+      <img src="images/youtube.png" alt="YouTube" />
+    </a>
+    <a href="https://www.instagram.com/wkdgus__08/" target="_blank">
+      <img src="images/instagram.png" alt="Instagram" />
+    </a>
+  </div>
+
+  <div class="footer-logo">
+  <img src="images/BDAR.png" alt="BDAR HIGHSCHOOL" style="width: 5%;" />
+</div>
+
+  <p>™© 2025 M0ngdori, Inc. I'm KING I'm GOD Inc. All Rights Reserved.</p>
+
+  <p class="footer-info">
+    멍돌이 게임즈 유한회사 경기도 성남시 분당구 장미로 92번길 4-3 (3층 301호)<br />
+    대표자: 신장현 | 대표전화: 010-9376-3062 | FAX: 그런거 없다. | 사업자등록번호: 이런건 사치다.<br />
+    
+  </p>
+</footer>
+
+</body>
+</html>

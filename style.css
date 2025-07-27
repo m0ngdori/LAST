@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+  background-color: #111;
+  color: #fff;
+  line-height: 1.6;
+  padding-bottom: 50px;
+}
+
+header {
+  background: url('https://buly.kr/BIVAnx9') no-repeat center center/cover;
+  height: 90vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.hero-text {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.section {
+  margin-bottom: 50px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #444;
+  padding-bottom: 10px;
+}
+
+.skill-icons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.skill-icons img {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-icons img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px red;
+}
+
+.skill-info {
+  text-align: center;
+}
+
+.skill-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.skill-info p {
+  margin-bottom: 15px;
+}
+
+.skill-info video {
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255,0,0,0.5);
+}
+
+.skins-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.skin-card {
+  width: 180px;
+  background-color: #1a1a1a;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  cursor: pointer;
+  text-align: center;
+}
+
+.skin-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255,0,0,0.4);
+}
+
+.skin-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 1px solid #333;
+}
+
+.skin-card p {
+  padding: 10px;
+  font-weight: 700;
+}
+
+/* 라이트박스 스타일 */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #000;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 3rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.lightbox-close:hover {
+  color: red;
+}
+
+.bio-toggle {
+  display: inline-block;
+  color: gold;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.bio-toggle:hover {
+  color: #ffd700;
+  text-decoration: underline;
+}
+
+.champion-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('https://buly.kr/BIVAnx9') center right/cover no-repeat;
+  overflow: hidden;
+  color: #fff;
+  font-family: 'Beaufort for LoL', serif;
+  letter-spacing: 0.5px;
+}
+
+.champion-hero::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(to right, rgba(0,0,0,0.75) 30%, rgba(0,0,0,0.4) 70%, transparent 100%);
+  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.8);  /* ⬅ 그림자 느낌 */
+  z-index: 1;
+}
+
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  justify-content: center;  /* 중앙 정렬 */
+  align-items: center;
+  text-align: center;
+  padding: 0; /* 왼쪽 패딩 제거 */
+}
+
+
+.hero-text {
+  max-width: 700px;
+  padding: 2rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.hero-text h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #c89b3c;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  line-height: 1.8;
+  font-family: 'Noto Sans KR', sans-serif;
+  margin-bottom: 2rem;
+}
+
+.hero-tags {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.info-card {
+  width: 100px;
+  height: 120px;
+  background: linear-gradient(to bottom, #0a0a1a, #111);
+  border: 1px solid #c89b3c;
+  border-radius: 4px;
+  padding: 0.8rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: #f0e6d2;
+  font-family: 'Noto Sans KR', sans-serif;
+  text-align: center;
+  box-shadow: 0 0 8px rgba(0,0,0,0.6);
+  transition: transform 0.2s;
+}
+
+.info-card:hover {
+  transform: scale(1.05);
+}
+
+.info-card img {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 6px;
+}
+
+.info-card .title {
+  font-size: 0.75rem;
+  color: #a09b8c;
+}
+
+.info-card .value {
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #f0e6d2;
+}
+
+
+.tag {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem 1.5rem;
+  border: 1px solid #c89b3c;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  text-align: center;
+  min-width: 120px;
+  color: #f0e6d2;
+}
+
+.tag strong {
+  display: block;
+  font-size: 1.2rem;
+  margin-top: 0.3rem;
+  color: #f0e6d2;
+}
+
+/* 애니메이션 */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.site-footer {
+  background: #0a0a0a;
+  color: #a09b8c;
+  text-align: center;
+  padding: 3rem 1rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  font-family: 'Noto Sans KR', sans-serif;
+  border-top: 1px solid #222;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-socials img {
+  width: 26px;
+  height: 26px;
+  filter: grayscale(100%) brightness(1.3);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.footer-socials img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.footer-logo img {
+  width: 120px;
+  opacity: 0.85;
+  margin: 1rem 0;
+}
+
+.language-toggle-wrapper {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  z-index: 999;
+  text-align: right;
+}
+
+.language-toggle-button {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 10px 16px;
+  border: 1px solid #c89b3c;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.language-toggle-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.language-options {
+  display: none;
+  text-align: center;
+  margin-top: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid #c89b3c;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.language-option {
+  padding: 10px 16px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.language-option:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  header {
+    height: auto;
+    padding: 3rem 0;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+
+  .info-card {
+    width: 80px;
+    height: 100px;
+  }
+
+  .skin-card {
+    width: 45%;
+    max-width: 160px;
+  }
+
+  .skill-icons {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .skill-icons img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .skill-info video {
+    width: 100%;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+
+  .site-footer {
+    font-size: 0.75rem;
+    padding: 2rem 1rem;
+  }
+
+  .footer-socials {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .skins-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    justify-items: center;
+  }
+}

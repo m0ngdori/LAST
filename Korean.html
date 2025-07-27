@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>아트록스 - 리그 오브 레전드</title>
+   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="champion-hero">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h2>다르킨의 검</h2>
+      <h1>아트록스</h1>
+      <p>아트록스는 한때 슈리마의 초월체로, 공허와 맞서 싸운 고귀한 전사였다.
+          하지만 전쟁과 타락 끝에 다르킨이라 불리며 필멸자의 마법에 속아 검에 봉인되었다.
+          수백 년 후 되살아난 그는 육체를 갈아치우며 전장을 떠돌았지만, 결국 영원히 해방될 수 없음을 깨닫는다.
+          이제 그는 모든 것을 파괴해 세상의 종말과 함께 자신도 사라지길 바란다.</p>
+      </p>
+      <div class="hero-tags">
+  <div class="info-card">
+    <img src="images/icon-role.png" alt="역할 아이콘">
+    <div class="title">역할군</div>
+    <div class="value">전사</div>
+  </div>
+  <div class="info-card">
+    <img src="images/icon-position.png" alt="포지션 아이콘">
+    <div class="title">포지션</div>
+    <div class="value">탑</div>
+  </div>
+</div>
+</header>
+
+<div class="language-toggle-wrapper">
+  <div class="language-toggle-button" onclick="toggleLanguageMenu()">언어 변경</div>
+  <div class="language-options" id="languageOptions">
+    <div class="language-option" onclick="setLanguage('ko')">한국어</div>
+    <div class="language-option" onclick="setLanguage('en')">ENGLISH</div>
+  </div>
+</div>
+
+
+<div class="container">
+
+<div class="section">
+  <h2>배경 이야기</h2>
+  <p>
+    한때는 공허에 맞서 싸웠던 슈리마의 명예로운 수호자 아트록스와 
+    그의 종족은 결국 공허보다 위험한 존재가 되어 룬테라의 존속을 위협했지만, 
+    교활한 필멸자의 마법에 속아넘어가 패배하게 되었다. 
+    수백 년에 걸친 봉인 끝에, 아트록스는 자신의 정기가 깃든 
+    마법 무기를 휘두르는 어리석은 자들을 
+    타락시키고 육신을 바꾸는 것으로 다시 한번 자유의 길을 찾아내었다. 
+    이제 이전의 잔혹한 모습을 닮은 육체를 차지한 아트록스는 
+    세상의 종말과 오랫동안 기다려온 복수를 열망한다.
+  </p>
+</div>
+
+  <div class="section">
+    <h2>스킬 정보</h2>
+    <div class="skill-icons">
+      <img src="https://ddragon.leagueoflegends.com/cdn/15.14.1/img/passive/Aatrox_Passive.png" alt="P" onclick="showSkill(0)" />
+      <img src="https://ddragon.leagueoflegends.com/cdn/15.14.1/img/spell/AatroxQ.png" alt="Q" onclick="showSkill(1)" />
+      <img src="https://ddragon.leagueoflegends.com/cdn/15.14.1/img/spell/AatroxW.png" alt="W" onclick="showSkill(2)" />
+      <img src="https://ddragon.leagueoflegends.com/cdn/15.14.1/img/spell/AatroxE.png" alt="E" onclick="showSkill(3)" />
+      <img src="https://ddragon.leagueoflegends.com/cdn/15.14.1/img/spell/AatroxR.png" alt="R" onclick="showSkill(4)" />
+    </div>
+    <div class="skill-info">
+      <h3 id="skill-name">사신 태세 (P)</h3>
+      <p id="skill-desc">주기적으로 아트록스의 기본 공격이 대상 최대 체력에 비례하여 추가 물리 피해를 입히고 자신의 체력을 회복합니다.</p>
+      <video id="skill-video" controls autoplay muted loop>
+        <source src="https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_P1.webm#t=0" type="video/webm" />
+      </video>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>이용 가능 스킨</h2>
+
+    <div class="skins-grid">
+      <div class="skin-card" onclick="openLightbox('img1')">
+        <img src="https://buly.kr/BIVAnx9" alt="기본 스킨" />
+        <p>아트록스</p>
+      </div>
+
+      <div class="skin-card" onclick="openLightbox('img2')">
+        <img src="https://buly.kr/90bK3M1" alt="정의의 아트록스" />
+        <p>정의의 아트록스</p>
+      </div>
+
+      <div class="skin-card" onclick="openLightbox('img3')">
+        <img src="https://buly.kr/EdtZRSu" alt="메카 아트록스" />
+        <p>메카 아트록스</p>
+      </div>
+
+      <div class="skin-card" onclick="openLightbox('img4')">
+        <img src="https://buly.kr/4md8Vmg" alt="바다 사냥꾼 아트록스" />
+        <p>바다 사냥꾼 아트록스</p>
+      </div>
+
+      <div class="skin-card" onclick="openLightbox('img5')">
+        <img src="https://buly.kr/HHcw9iM" alt="핏빛달 아트록스" />
+        <p>핏빛달 아트록스</p>
+      </div>
+
+      <div class="skin-card" onclick="openLightbox('img6')">
+        <img src="https://buly.kr/6MrxL9M" alt="프레스티지 핏빛달 아트록스" />
+        <p>프레스티지 핏빛달 아트록스</p>
+      </div>
+
+      <div class="skin-card" onclick="openLightbox('img7')">
+        <img src="https://buly.kr/2qYnirP" alt="승리의 아트록스" />
+        <p>승리의 아트록스</p>
+      </div>
+
+      <div class="skin-card" onclick="openLightbox('img8')">
+        <img src="https://buly.kr/7bHGCuB" alt="오디세이 아트록스" />
+        <p>오디세이 아트록스</p>
+      </div>
+
+      <div class="skin-card" onclick="openLightbox('img9')">
+        <img src="https://buly.kr/612RNbA" alt="달을 삼킨 아트록스" />
+        <p>달을 삼킨 아트록스</p>
+      </div>
+
+      <div class="skin-card" onclick="openLightbox('img10')">
+        <img src="https://buly.kr/G3DdI6u" alt="DRX 아트록스" />
+        <p>DRX 아트록스</p>
+      </div>
+
+      <div class="skin-card" onclick="openLightbox('img11')">
+        <img src="https://buly.kr/2JoWmU4" alt="프레스티지 DRX 아트록스" />
+        <p>프레스티지 DRX 아트록스</p>
+      </div>
+
+      <div class="skin-card" onclick="openLightbox('img12')">
+        <img src="https://buly.kr/881X9QD" alt="태고족 아트록스" />
+        <p>태고족 아트록스</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- 라이트박스 모음 -->
+<div id="img1" class="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <img src="https://buly.kr/BIVAnx9" alt="아트록스 기본 스킨" />
+</div>
+<div id="img2" class="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <img src="https://buly.kr/90bK3M1" alt="정의의 아트록스" />
+</div>
+<div id="img3" class="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <img src="https://buly.kr/EdtZRSu" alt="메카 아트록스" />
+</div>
+<div id="img4" class="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <img src="https://buly.kr/4md8Vmg" alt="바다 사냥꾼 아트록스" />
+</div>
+<div id="img5" class="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <img src="https://buly.kr/HHcw9iM" alt="핏빛달 아트록스" />
+</div>
+<div id="img6" class="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <img src="https://buly.kr/6MrxL9M" alt="프레스티지 핏빛달 아트록스" />
+</div>
+<div id="img7" class="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <img src="https://buly.kr/2qYnirP" alt="승리의 아트록스" />
+</div>
+<div id="img8" class="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <img src="https://buly.kr/7bHGCuB" alt="오디세이 아트록스" />
+</div>
+<div id="img9" class="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <img src="https://buly.kr/612RNbA" alt="달을 삼킨 아트록스" />
+</div>
+<div id="img10" class="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <img src="https://buly.kr/G3DdI6u" alt="DRX 아트록스" />
+</div>
+<div id="img11" class="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <img src="https://buly.kr/2JoWmU4" alt="프레스티지 DRX 아트록스" />
+</div>
+<div id="img12" class="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <img src="https://buly.kr/881X9QD" alt="태고족 아트록스" />
+</div>
+
+<script>
+  const skillData = [
+    {
+      name: "사신 태세 (P)",
+      desc: "주기적으로 아트록스의 기본 공격이 대상 최대 체력에 비례하여 추가 물리 피해를 입히고 자신의 체력을 회복합니다.",
+      video: "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_P1.webm#t=0"
+    },
+    {
+      name: "다르킨의 검 (Q)",
+      desc: "아트록스가 검을 휘둘러 피해를 입힙니다. 이 스킬은 세 번 사용할 수 있으며, 각 사용마다 타격 범위와 효과가 다릅니다.",
+      video: "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_Q1.webm#t=0"
+    },
+    {
+      name: "지옥 사슬 (W)",
+      desc: "아트록스가 일직선상의 적을 사슬로 끌어당기고, 중심에 머물면 끌어당깁니다.",
+      video: "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_W1.webm#t=0"
+    },
+    {
+      name: "그림자 걸음 (E)",
+      desc: "아트록스가 짧은 거리만큼 돌진하고, 다음 기본 공격이 회복 효과를 갖습니다.",
+      video: "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_E1.webm#t=0"
+    },
+    {
+      name: "세계의 종말 (R)",
+      desc: "아트록스가 강력한 오라를 발산해 공격력과 이동 속도가 상승하며, 적 처치 시 효과 지속 시간이 초기화됩니다.",
+      video: "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_R1.webm#t=0"
+    }
+  ];
+
+ function showSkill(index) {
+  const skill = skillData[index];
+  const videoElement = document.getElementById("skill-video");
+  const sourceElement = videoElement.querySelector("source");
+
+  // 텍스트 교체
+  document.getElementById("skill-name").innerText = skill.name;
+  document.getElementById("skill-desc").innerText = skill.desc;
+
+  // video source 교체
+  if (sourceElement.src !== skill.video) {
+    sourceElement.src = skill.video;
+
+    // video 업데이트 (최소화된 방식)
+    videoElement.pause();  // 중단 후
+    videoElement.load();   // 소스 갱신
+    videoElement.play();   // 다시 재생
+  }
+}
+
+
+
+  function openLightbox(id) {
+    document.getElementById(id).classList.add('active');
+    document.body.style.overflow = 'hidden'; // 스크롤 잠금
+  }
+
+  function closeLightbox() {
+    const lightboxes = document.querySelectorAll('.lightbox.active');
+    lightboxes.forEach(lb => lb.classList.remove('active'));
+    document.body.style.overflow = ''; // 스크롤 해제
+  }
+function toggleLanguageMenu() {
+  const menu = document.getElementById("languageOptions");
+  menu.style.display = (menu.style.display === "block") ? "none" : "block";
+}
+
+function setLanguage(lang) {
+  if (lang === 'ko') {
+    window.location.href = "Korean.html";
+  } else if (lang === 'en') {
+    window.location.href = "LANG/English.html";
+  }
+}
+
+
+
+</script>
+<footer class="site-footer">
+  <div class="footer-socials">
+    <a href="https://www.youtube.com/@M0ngtrox08" target="_blank">
+      <img src="images/youtube.png" alt="YouTube" />
+    </a>
+    <a href="https://www.instagram.com/wkdgus__08/" target="_blank">
+      <img src="images/instagram.png" alt="Instagram" />
+    </a>
+  </div>
+
+  <div class="footer-logo">
+  <img src="images/BDAR.png" alt="BDAR HIGHSCHOOL" style="width: 5%;" />
+</div>
+
+  <p>™© 2025 M0ngdori, Inc. I'm KING I'm GOD Inc. All Rights Reserved.</p>
+
+  <p class="footer-info">
+    멍돌이 게임즈 유한회사 경기도 성남시 분당구 장미로 92번길 4-3 (3층 301호)<br />
+    대표자: 신장현 | 대표전화: 010-9376-3062 | FAX: 그런거 없다. | 사업자등록번호: 이런건 사치다.<br />
+    
+  </p>
+</footer>
+
+</body>
+</html>
